@@ -69,6 +69,7 @@ function header(page) {
         <a href="./index.html#how-it-works">How it works</a>
         <a href="./about.html">About</a>
         <a href="./contact.html">Contact</a>
+        <a href="./documents.html">Documents</a>
         <a href="./index.html#faq">FAQs</a>
       </aside>
     </div>
@@ -107,12 +108,16 @@ function footer() {
           <h5>SUPPORT</h5>
           <a href="./index.html#faq">FAQs</a>
           <a href="./contact.html">Support</a>
+          <a href="./documents.html">Documents</a>
           <a href="./terms.html">Terms of Service</a>
           <a href="./privacy.html">Privacy Policy</a>
+          <a href="./disclaimer.html">Medical Disclaimer</a>
+          <a href="./consent.html">Telehealth Consent</a>
+          <a href="./hipaa.html">HIPAA Notice</a>
         </div>
       </div>
       <div class="wrap">
-        <p class="disclaimer-bar"></p>
+        <p class="disclaimer-bar">Compounded medications are not FDA-approved. RSRV is a telehealth technology platform that connects patients with independently licensed clinicians and pharmacies; it does not itself practice medicine or operate a pharmacy. See the <a href="./documents.html">RSRV documents</a> for Terms, Privacy, Disclaimer, Consent, and HIPAA Notice.</p>
         <div class="footer-bottom">
           <span>© ${new Date().getFullYear()} Peakcare. All rights reserved.</span>
           <span>

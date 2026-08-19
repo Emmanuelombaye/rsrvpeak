@@ -268,11 +268,54 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .pdp-visual { background: var(--warm); border-radius: 28px; min-height: 420px; display: grid; place-items: center; padding: 24px; }
 .pdp-visual img { height: min(460px, 60vh); width: auto; object-fit: contain; }
 .legal { max-width: 760px; padding-bottom: 80px; }
+.legal.legal-wide { max-width: 980px; }
 .legal h1 { font-size: clamp(2.2rem, 4vw, 3.4rem); margin: 40px 0 8px; color: var(--forest); }
 .legal .updated { color: var(--muted); margin-bottom: 28px; }
 .legal h2 { margin: 28px 0 10px; font-size: 22px; color: var(--forest); }
 .legal p, .legal li { color: var(--muted); line-height: 1.7; margin-bottom: 10px; }
 .legal ul { padding-left: 18px; }
+.legal a { color: var(--emerald); }
+.kicker { margin-top: 36px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--emerald); }
+.legal-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-top: 28px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+.legal-nav a {
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+}
+.legal-nav a:hover,
+.legal-nav a[aria-current="page"] { color: var(--forest); }
+.doc-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin: 28px 0 36px;
+}
+.doc-card {
+  display: block;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 22px 22px 18px;
+  text-decoration: none;
+}
+.doc-card span {
+  font-size: 12px;
+  letter-spacing: .14em;
+  color: var(--emerald);
+}
+.doc-card h2 { margin: 8px 0 8px; font-size: 22px; }
+.doc-card p { margin: 0; }
+.doc-card:hover { border-color: color-mix(in oklab, var(--emerald) 45%, var(--line)); }
+@media (min-width: 800px) {
+  .doc-grid { grid-template-columns: 1fr 1fr; }
+}
 
 .footer { border-top: 1px solid var(--line); padding: 48px 0 28px; background: var(--ivory); }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 24px; }
@@ -284,6 +327,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .wordmark { font-size: 42px; letter-spacing: .06em; font-weight: 600; color: var(--forest); text-transform: lowercase; }
 
 .disclaimer-bar { font-size: 12px; color: var(--muted); line-height: 1.55; padding: 18px 0 8px; }
+.disclaimer-bar a,
+.footer-bottom a { display: inline; }
 
 @media (min-width: 960px) {
   .steps { grid-template-columns: 1fr 1fr 1fr; }
