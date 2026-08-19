@@ -2,3 +2,9 @@
 *.local
 node_modules
 scripts/assets
+.next
+out
+.vercel
+*.tsbuildinfo
+.env*.local
+app-globals-temp.css
