@@ -90,7 +90,8 @@ export default function PrivacyPage() {
       <p>
         Privacy questions: privacy@rsrv.health · +1 (978) 740-7778
         <br />
-        RSRV Health — mailing address to be inserted by RSRV.
+        RSRV is a U.S. telehealth platform. Written privacy requests may be sent by email to privacy@rsrv.health. A
+        physical mailing address for legal notices is available upon request.
       </p>
     </LegalLayout>
   );

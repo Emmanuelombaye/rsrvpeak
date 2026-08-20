@@ -19,8 +19,8 @@ export function Footer() {
                 <img src={withBase("/logos/rsrv-wordmark.svg")} alt="RSRV" />
               </Link>
               <p>
-                The definitive infrastructure for specialized medical care and performance protocols. HIPAA compliant,
-                physician led, and pharmacy integrated.
+                Physician-prescribed GLP-1 weight-management programs. HIPAA compliant, physician led, and pharmacy
+                integrated.
               </p>
             </div>
             <div className="footer-links">
@@ -48,7 +48,8 @@ export function Footer() {
           <div className="footer-bottom">
             <span>© {year} RSRV. All rights reserved.</span>
             <span>
-              <a href="#">LINKEDIN</a> · <a href="#">INSTAGRAM</a> · <a href="#">FACEBOOK</a>
+              <a href={companyPhone.href}>{companyPhone.display}</a> ·{" "}
+              <a href="mailto:support@rsrv.health">support@rsrv.health</a>
             </span>
           </div>
         </div>

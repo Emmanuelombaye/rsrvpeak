@@ -50,7 +50,7 @@ export default function TermsPage() {
       </p>
       <h2>5. Fees, billing, and refunds</h2>
       <p>
-        Displayed prices start at the amounts shown on product pages (for example, programs currently start at $146/month
+        Displayed prices start at the amounts shown on product pages (for example, programs currently start at $399/month
         depending on protocol and plan). You are not charged until a licensed provider has reviewed and approved your
         intake. Fees may include clinician review, medication, and cold-chain overnight shipping. Subscriptions renew
         until canceled according to the plan you select. If a clinician does not approve treatment, you will not be
@@ -111,7 +111,8 @@ export default function TermsPage() {
         <br />
         Email: support@rsrv.health · Legal: legal@rsrv.health
         <br />
-        Mailing address: to be inserted by RSRV (registered office / principal place of business).
+        RSRV is a U.S. telehealth platform. Written notices may be sent by email to legal@rsrv.health. A physical mailing
+        address for legal notices is available upon request.
       </p>
     </LegalLayout>
   );

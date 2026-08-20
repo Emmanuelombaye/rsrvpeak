@@ -1,5 +1,5 @@
 export type Product = {
-  slug: "tirzepatide" | "semaglutide" | "nad" | "sermorelin";
+  slug: "tirzepatide" | "semaglutide";
   name: string;
   href: string;
   img: string;
@@ -48,37 +48,6 @@ export const products: Product[] = [
     admin:
       "Injectable protocol. Your clinician will provide administration instructions, titration guidance, and follow-up check-ins. Prescription required.",
   },
-  {
-    slug: "nad",
-    name: "NAD+ Therapy (Cellular Rejuvenation)",
-    href: "/nad",
-    img: "/assets/peakcare/nad.png",
-    price: "$199.00/mo",
-    totalPrice: "$199.00 USD",
-    tag: "Longevity · Best Seller · Personalized",
-    pills: ["Longevity", "Best Seller"],
-    category: "Longevity",
-    copy: "Rejuvenate your cellular health, boost mental clarity, and increase energy levels.",
-    overview: "A physician-prescribed NAD+ protocol designed to support cellular energy, mental clarity, and recovery.",
-    available: "Available in Personalized NAD+.",
-    admin: "Your clinician will provide administration instructions and follow-up check-ins. Prescription required.",
-  },
-  {
-    slug: "sermorelin",
-    name: "Sermorelin",
-    href: "/sermorelin",
-    img: "/assets/peakcare/sermorelin-brand.png",
-    price: "$199.00/mo",
-    totalPrice: "$199.00 USD",
-    tag: "Muscle Recovery · Personalized",
-    pills: ["Muscle Recovery"],
-    category: "Muscle Recovery",
-    copy: "Support natural HGH production to improve muscle recovery, sleep quality, and lean body composition.",
-    overview:
-      "A physician-prescribed sermorelin protocol that gently stimulates your body's own growth hormone axis — restoring sleep depth, recovery, and metabolic tone.",
-    available: "Available in Personalized Sermorelin.",
-    admin: "Your clinician will provide administration instructions and follow-up check-ins. Prescription required.",
-  },
 ];
 
 export const shopProtocols = products.filter((product) => product.pills.includes("Weight Loss"));
@@ -86,7 +55,7 @@ export const shopProtocols = products.filter((product) => product.pills.includes
 export const faqs = [
   {
     q: "What is RSRV?",
-    a: "RSRV is a telehealth platform connecting patients with licensed providers and pharmacies for personalized, compounded treatments. While we are best known for our GLP-1 weight management programs, we also support patients across other health needs with tailored, science-backed care.",
+    a: "RSRV is a U.S. telehealth platform that connects patients with independently licensed clinicians and state-licensed compounding pharmacies for physician-prescribed GLP-1 weight-management programs.",
   },
   {
     q: "Who is eligible for treatment?",
@@ -102,7 +71,7 @@ export const faqs = [
   },
   {
     q: "How much does treatment cost?",
-    a: "Programs start at $146/month. You are not charged until a provider has reviewed and approved your intake.",
+    a: "Programs currently start at $399/month, as shown on each product page. You are not charged until a licensed provider has reviewed and approved your intake.",
   },
 ];
 

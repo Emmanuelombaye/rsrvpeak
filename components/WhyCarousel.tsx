@@ -16,8 +16,8 @@ const reasons = [
     pos: "tr",
   },
   {
-    title: "Science-backed",
-    copy: "Clinically guided care designed to support long-term health, performance, and overall physical wellbeing.",
+    title: "Clinician-guided",
+    copy: "Clinician-guided care designed to support long-term metabolic health and overall physical wellbeing.",
     icon: "flask" as const,
     pos: "bl",
   },
@@ -77,8 +77,8 @@ export function WhyCarousel() {
           Why <span className="accent">RSRV?</span>
         </h2>
         <p className="lede">
-          A daily combination of medical-grade treatments designed to support longevity, maintain metabolic balance, and
-          help you feel consistently well.
+          Physician-prescribed GLP-1 care designed to support metabolic health, with clinician follow-up and
+          cold-chain delivery.
         </p>
       </Reveal>
       <div className="why-stage">

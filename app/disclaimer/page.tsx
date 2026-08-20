@@ -38,19 +38,18 @@ export default function DisclaimerPage() {
       </p>
       <h2>Results vary</h2>
       <p>
-        Weight, longevity, energy, sleep, and body-composition outcomes vary. Testimonials, clinician bios, and
-        “clinically proven protocol” language describe the category of care and network credentials; they are not a
-        guarantee of your result. Photographs are illustrative.
+        Weight and metabolic outcomes vary. Marketing copy, photographs, and clinician illustrations on this site are
+        educational and are not a guarantee of your result. Photographs are illustrative.
       </p>
       <h2>Clinician and pharmacy independence</h2>
       <p>
-        Licensed clinicians in the nationwide network provide care as independent licensed professionals. Pharmacies that
+        Licensed U.S. clinicians provide care as independent licensed professionals. Pharmacies that
         fulfill RSRV orders are independently licensed. RSRV Health is a telehealth technology platform and does not
         replace your clinician’s judgment.
       </p>
       <h2>Risks</h2>
       <p>
-        GLP-1 receptor agonist therapy and other protocols may cause gastrointestinal symptoms, hypoglycemia risk in some
+        GLP-1 receptor agonist therapy may cause gastrointestinal symptoms, hypoglycemia risk in some
         patients, injection-site reactions, and other adverse effects. Certain conditions (including pregnancy, personal
         or family history of medullary thyroid carcinoma or MEN2, and other clinician-identified contraindications) may
         make treatment inappropriate. Your clinician will review risks, benefits, and alternatives with you.

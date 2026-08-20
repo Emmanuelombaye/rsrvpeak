@@ -82,10 +82,10 @@ function TicketChat({ uid = "chat" }: { uid?: string }) {
       <rect width="400" height="300" rx="20" fill="#ffffff" />
       <circle cx="46" cy="34" r="16" fill={`url(#${uid}-avatarGrad)`} />
       <text x="46" y="38" fontSize="12" fontWeight="700" fill="white" textAnchor="middle">
-        MC
+        CL
       </text>
       <text x="70" y="31" fontSize="14" fontWeight="600" fill="#2D2D2D">
-        Dr. Maya Chen
+        Clinician
       </text>
       <circle cx="72" cy="42" r="3" fill="#C4A265" />
       <text x="80" y="45" fontSize="10" fill="#8A8477">
@@ -123,7 +123,7 @@ function TicketChat({ uid = "chat" }: { uid?: string }) {
       <circle cx="68" cy="236" r="3" fill="#B4AC9C" opacity="0.4" />
       <rect x="20" y="262" width="360" height="26" rx="13" fill="#FAF9F6" stroke="#EDE9DF" strokeWidth="1.5" />
       <text x="34" y="279" fontSize="10.5" fill="#B4AC9C">
-        Message Dr. Chen…
+        Message clinician…
       </text>
       <circle cx="358" cy="275" r="14" fill="#C4A265" filter={`url(#${uid}-cc-shadow)`} />
       <g transform="translate(351 267)" stroke="#ffffff" strokeWidth="1.6" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -191,7 +191,7 @@ function TicketPlan({ uid = "plan" }: { uid?: string }) {
         Follow-up Check In
       </text>
       <text x="94" y="236" fontSize="11.5" fill="#8A8477">
-        In 2 weeks · with Dr. Chen
+        In 2 weeks · clinician follow-up
       </text>
     </svg>
   );

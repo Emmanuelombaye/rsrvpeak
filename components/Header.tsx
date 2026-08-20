@@ -27,7 +27,7 @@ function TickerRow() {
           />
           <circle cx="12" cy="10" r="2.2" stroke="currentColor" strokeWidth="1.5" />
         </svg>
-        Licensed Providers in all 50 States
+        Licensed U.S. Providers
       </span>
       <span className="ticker-item">
         <svg viewBox="0 0 24 24" fill="none">

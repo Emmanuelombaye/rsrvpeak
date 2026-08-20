@@ -9,7 +9,7 @@ const slides = [
     type: "lifestyle" as const,
     img: "/assets/peakcare/lifestyle-slider-1.png",
     alt: "Medical Weight Loss",
-    kicker: "Clinically Proven Protocol",
+    kicker: "Physician-prescribed protocol",
     title: "Medical Weight Loss",
     href: "/shop",
     cta: "Explore Protocol",

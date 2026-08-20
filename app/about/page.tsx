@@ -8,13 +8,13 @@ export default function AboutPage() {
     <main className="wrap legal">
       <h1>About Us</h1>
       <p>
-        RSRV is a telehealth platform connecting patients with licensed providers and pharmacies for personalized,
-        compounded treatments. While we are best known for our GLP-1 weight management programs, we also support patients
-        across other health needs with tailored, science-backed care.
+        RSRV is a U.S. telehealth platform connecting patients with independently licensed clinicians and state-licensed
+        compounding pharmacies for physician-prescribed GLP-1 weight-management programs.
       </p>
       <p>
-        The platform is HIPAA compliant, physician led, and pharmacy integrated — with licensed providers in all 50 states
-        and fulfillment through U.S. licensed pharmacies. Medications ship overnight in temperature-controlled packaging.
+        The platform is HIPAA compliant, physician led, and pharmacy integrated. Licensed U.S. clinicians review each
+        intake. Fulfillment is through U.S. licensed pharmacies. Medications ship overnight in temperature-controlled
+        packaging.
       </p>
       <p>
         Medical intake evaluation, continuous check-ins, and continuous care support are part of every protocol. Payment is

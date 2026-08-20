@@ -16,8 +16,6 @@ const htmlPages = [
   "hipaa",
   "tirzepatide",
   "semaglutide",
-  "nad",
-  "sermorelin",
 ] as const;
 
 const nextConfig: NextConfig = {
@@ -38,6 +36,10 @@ if (isGithubPages) {
 } else {
   nextConfig.redirects = async () => [
     { source: "/index.html", destination: "/", permanent: true },
+    { source: "/nad", destination: "/shop", permanent: true },
+    { source: "/sermorelin", destination: "/shop", permanent: true },
+    { source: "/nad.html", destination: "/shop", permanent: true },
+    { source: "/sermorelin.html", destination: "/shop", permanent: true },
     ...htmlPages.map((page) => ({
       source: `/${page}.html`,
       destination: `/${page}`,

@@ -243,15 +243,16 @@ export function CheckoutForm() {
                   <label className="agree">
                     <input required type="checkbox" />
                     <span>
-                      I authorize RSRV&apos;s affiliated clinicians to securely review my medical records and prescribe
-                      the necessary medication if candidate. *
+                      I authorize independently licensed clinicians affiliated with RSRV to review my intake and, if
+                      appropriate, prescribe treatment. *
                     </span>
                   </label>
                   <p className="lede">
-                    Order via our secure portal. You will only be billed if approved by a licensed provider.
+                    This page submits your medical intake. Payment is not collected here. You are billed only if a licensed
+                    provider approves treatment.
                   </p>
                   <button className="btn btn-primary" type="submit">
-                    Confirm & Purchase
+                    Submit intake for review
                   </button>
                 </div>
               ) : null}
@@ -264,7 +265,7 @@ export function CheckoutForm() {
               <img src={withBase(product.img)} alt="" />
               <div>
                 <h4>{product.name}</h4>
-                <p>1 Month Plan</p>
+                <p>Monthly program</p>
               </div>
             </div>
             <div className="order-row">
@@ -280,11 +281,12 @@ export function CheckoutForm() {
               <strong>Included</strong>
             </div>
             <div className="order-row total">
-              <span>Total Due Today</span>
+              <span>Due if approved</span>
               <strong>{price}</strong>
             </div>
             <p className="lede">
-              Order via our secure portal. You will only be billed if approved by a licensed provider.
+              This page submits your medical intake. Payment is not collected here. You are billed only if a licensed
+              provider approves treatment.
             </p>
           </aside>
         </div>

@@ -21,7 +21,7 @@ export default function HomePage() {
             <br /> Reserved for you.
           </h1>
           <p>
-            Physician-prescribed protocols for longevity, performance, and your next level of well-being.
+            Physician-prescribed GLP-1 weight-management programs, with licensed U.S. clinicians and U.S. compounding pharmacies.
           </p>
         </section>
 
@@ -37,7 +37,7 @@ export default function HomePage() {
               <h2>
                 <em>Explore</em> all protocols.
               </h2>
-              <p>Curated treatments for weight loss, longevity, and performance.</p>
+              <p>Curated GLP-1 treatments for medical weight management.</p>
               <span className="shop-all">
                 SHOP ALL{" "}
                 <svg viewBox="0 0 16 16" fill="none">
@@ -53,7 +53,7 @@ export default function HomePage() {
               <img src={withBase("/assets/peakcare/avatar-team-2.png")} alt="" />
               <img src={withBase("/assets/peakcare/avatar-team-3.png")} alt="" />
             </div>
-            <h2>Nationwide Network of U.S. Licensed Clinicians</h2>
+            <h2>Network of U.S. Licensed Clinicians</h2>
             <p>Medical intake evaluation, continuous check-ins, and continuous care support.</p>
           </article>
           </SnapPager>
@@ -79,7 +79,7 @@ export default function HomePage() {
                   Physician-led
                   <br /> care.
                 </h3>
-                <p>Licensed clinicians in all 50 states. HIPAA compliant. U.S. compounding pharmacies.</p>
+                <p>Licensed U.S. clinicians. HIPAA compliant. U.S. compounding pharmacies.</p>
               </article>
               <aside className="doctor-cert">
                 <div className="doctor-cert-icon" aria-hidden="true">
@@ -95,26 +95,26 @@ export default function HomePage() {
                 </div>
                 <div>
                   <p>Licensed</p>
-                  <p>Board Certified</p>
+                  <p>Prescription required</p>
                 </div>
               </aside>
             </div>
           </div>
           <div className="doctor-copy">
-            <p className="eyebrow">Trusted by Clinical Experts</p>
+            <p className="eyebrow">Physician-led clinical network</p>
             <h2>
               RSRV
               <br /> Clinical <span>Network</span>
             </h2>
             <p className="doctor-role">Physician-led care</p>
             <p className="quote">
-              “Licensed nationwide, with extensive experience in telemedicine, clinical care, and metabolic health.
-              Dedicated to helping patients achieve their wellness goals through evidence-based, personalized protocols.”
+              “Independent licensed U.S. clinicians review each intake. Care is personalized after medical evaluation —
+              not guaranteed by marketing copy or photographs on this site.”
             </p>
             <div className="meta">
               <div>
                 <p className="meta-label">Coverage</p>
-                <p className="meta-value">Licensed providers in all 50 states</p>
+                <p className="meta-value">Licensed U.S. clinicians review every intake</p>
               </div>
               <div>
                 <p className="meta-label">Compliance</p>
@@ -139,8 +139,7 @@ export default function HomePage() {
             Achieve lasting vitality with clinical-grade <span className="accent italic">treatments.</span>
           </h2>
           <p className="lede">
-            Access premium protocols designed to support longevity, maintain metabolic balance, and elevate your everyday
-            health.
+            Access physician-prescribed GLP-1 protocols designed to support metabolic health under clinician supervision.
           </p>
           <Link className="btn btn-accent" href="/shop">
             Shop Clinical Protocols

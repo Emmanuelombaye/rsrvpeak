@@ -22,6 +22,10 @@ export default function ContactPage() {
         <strong>Legal:</strong> <a href="mailto:legal@rsrv.health">legal@rsrv.health</a>
       </p>
       <p>
+        RSRV is a U.S. telehealth platform. There is no public storefront. For written legal or privacy notices, use the
+        emails above. A physical mailing address is available upon request.
+      </p>
+      <p>
         Typical clinician review is within 24 hours of a complete intake. You are not charged until a provider has
         reviewed and approved your intake.
       </p>

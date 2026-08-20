@@ -20,11 +20,11 @@ const instrument = Instrument_Serif({
 
 export const metadata: Metadata = {
   title: {
-    default: "RSRV | Longevity Science, Optimized for You",
+    default: "RSRV | Physician-Prescribed Weight Management",
     template: "%s | RSRV",
   },
   description:
-    "Physician-prescribed metabolic, longevity, and performance protocols. HIPAA compliant, physician led, and pharmacy integrated.",
+    "Physician-prescribed GLP-1 weight-management programs. HIPAA compliant, physician led, and pharmacy integrated.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },

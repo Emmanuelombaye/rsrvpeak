@@ -66,7 +66,7 @@ export function ShopGrid() {
                 Learn more
               </Link>
             </div>
-            <p className="product-note">*New Patients, 6-month plan</p>
+            <p className="product-note">*New patients. Billed monthly after clinician approval.</p>
           </article>
         ))}
       </section>

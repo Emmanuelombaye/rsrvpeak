@@ -93,7 +93,8 @@ export default function HipaaPage() {
         <br />
         privacy@rsrv.health · legal@rsrv.health
         <br />
-        Mailing address: to be inserted by RSRV (registered office / principal place of business).
+        RSRV is a U.S. telehealth platform. Written HIPAA requests may be sent by email to privacy@rsrv.health. A physical
+        mailing address for legal notices is available upon request.
       </p>
     </LegalLayout>
   );
