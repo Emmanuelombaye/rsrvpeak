@@ -16,7 +16,7 @@ export function Footer() {
           <div className="footer-grid">
             <div>
               <Link className="footer-logo" href="/" aria-label="RSRV home">
-                <img src={withBase("/assets/peakcare/logo.png")} alt="RSRV" />
+                <img src={withBase("/logos/rsrv-wordmark.svg")} alt="RSRV" />
               </Link>
               <p>
                 The definitive infrastructure for specialized medical care and performance protocols. HIPAA compliant,

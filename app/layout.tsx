@@ -26,7 +26,12 @@ export const metadata: Metadata = {
   description:
     "Physician-prescribed metabolic, longevity, and performance protocols. HIPAA compliant, physician led, and pharmacy integrated.",
   icons: {
-    icon: "/assets/peakcare/logo.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/favicon.svg",
   },
 };
 

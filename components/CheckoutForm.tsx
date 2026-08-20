@@ -13,11 +13,11 @@ const states = [
   "SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","DC",
 ];
 
-const screening = [
-  "Are you currently pregnant, trying to become pregnant, or breastfeeding?",
-  "Have you been diagnosed with medullary thyroid carcinoma or MEN2?",
-  "Have you ever been diagnosed with pancreatitis?",
-  "Do you have a history of severe gastrointestinal disease?",
+const screeningConditions = [
+  "Pregnancy, trying to conceive, or breastfeeding",
+  "Personal or family history of medullary thyroid carcinoma or MEN2",
+  "History of pancreatitis",
+  "Severe gastrointestinal disease",
 ];
 
 function money(product: Product) {
@@ -31,6 +31,7 @@ export function CheckoutForm() {
   const [step, setStep] = useState(1);
   const [done, setDone] = useState(false);
   const [sex, setSex] = useState("");
+  const [conditions, setConditions] = useState("");
   const years = useMemo(() => Array.from({ length: 100 }, (_, i) => 2026 - i), []);
   const price = money(product);
 
@@ -72,7 +73,7 @@ export function CheckoutForm() {
           >
             <section className={`cko-step${step === 1 ? " open" : ""}`}>
               <button type="button" className="cko-head" onClick={() => go(1)}>
-                <span>1</span> Patient Information
+                <span>1</span> Step 1 — Patient Information
               </button>
               {step === 1 ? (
                 <div className="cko-card">
@@ -149,7 +150,7 @@ export function CheckoutForm() {
 
             <section className={`cko-step${step === 2 ? " open" : ""}`}>
               <button type="button" className="cko-head" onClick={() => step > 1 && go(2)}>
-                <span>2</span> Shipping Address
+                <span>2</span> Step 2 — Shipping Address
               </button>
               {step === 2 ? (
                 <div className="cko-card">
@@ -158,7 +159,7 @@ export function CheckoutForm() {
                     <input required placeholder="123 Main Street" />
                   </label>
                   <label>
-                    Apt / Suite
+                    Apartment / Suite (Optional)
                     <input />
                   </label>
                   <div className="cko-three">
@@ -178,7 +179,7 @@ export function CheckoutForm() {
                       </select>
                     </label>
                     <label>
-                      ZIP *
+                      ZIP / Postcode *
                       <input required />
                     </label>
                   </div>
@@ -191,42 +192,34 @@ export function CheckoutForm() {
 
             <section className={`cko-step${step === 3 ? " open" : ""}`}>
               <button type="button" className="cko-head" onClick={() => step > 2 && go(3)}>
-                <span>3</span> Medical Screening
+                <span>3</span> Step 3 — Medical Screening
               </button>
               {step === 3 ? (
                 <div className="cko-card">
-                  <div className="cko-two">
-                    <label>
-                      Height *
-                      <input required placeholder="5'10&quot;" />
-                    </label>
-                    <label>
-                      Weight (lbs) *
-                      <input required />
-                    </label>
-                  </div>
-                  {screening.map((q) => (
-                    <fieldset key={q}>
-                      <legend>{q}</legend>
-                      <div className="sex-row">
-                        <label className="choice">
-                          <input required type="radio" name={q} /> No
-                        </label>
-                        <label className="choice">
-                          <input required type="radio" name={q} /> Yes
-                        </label>
-                      </div>
-                    </fieldset>
-                  ))}
-                  <label>
-                    Current medications
-                    <textarea rows={3} placeholder="List medications, or None" />
-                  </label>
-                  <label>
-                    Allergies
-                    <textarea rows={2} placeholder="List allergies, or None" />
-                  </label>
-                  <button className="btn btn-primary" type="submit">
+                  <fieldset>
+                    <legend>Do any of the following conditions apply to you? *</legend>
+                    <ul className="screen-list">
+                      {screeningConditions.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                    <div className="sex-row">
+                      {[
+                        { value: "yes", label: "Yes, one or more" },
+                        { value: "no", label: "No, none apply" },
+                      ].map((option) => (
+                        <button
+                          key={option.value}
+                          type="button"
+                          className={conditions === option.value ? "on" : ""}
+                          onClick={() => setConditions(option.value)}
+                        >
+                          {option.label}
+                        </button>
+                      ))}
+                    </div>
+                  </fieldset>
+                  <button className="btn btn-primary" type="submit" disabled={!conditions}>
                     Continue to Agreements
                   </button>
                 </div>
@@ -235,22 +228,24 @@ export function CheckoutForm() {
 
             <section className={`cko-step${step === 4 ? " open" : ""}`}>
               <button type="button" className="cko-head" onClick={() => step > 3 && go(4)}>
-                <span>4</span> Agreements & Checkout
+                <span>4</span> Step 4 — Agreements & Checkout
               </button>
               {step === 4 ? (
                 <div className="cko-card">
                   <label className="agree">
-                    <input required type="checkbox" /> I agree to the <Link href="/terms">Terms of Service</Link>.
+                    <input required type="checkbox" />
+                    <span>
+                      I agree to the <Link href="/terms">Terms of Service</Link>,{" "}
+                      <Link href="/consent">Medical Consent</Link> form, and acknowledge the{" "}
+                      <Link href="/consent">Telehealth Informed Consent</Link> for specialized medical protocols. *
+                    </span>
                   </label>
                   <label className="agree">
-                    <input required type="checkbox" /> I consent to telehealth evaluation as described in the{" "}
-                    <Link href="/consent">Telehealth Informed Consent</Link>.
-                  </label>
-                  <label className="agree">
-                    <input required type="checkbox" /> I have read the <Link href="/hipaa">HIPAA Notice</Link>.
-                  </label>
-                  <label className="agree">
-                    <input required type="checkbox" /> I understand compounded medications are not FDA-approved.
+                    <input required type="checkbox" />
+                    <span>
+                      I authorize RSRV&apos;s affiliated clinicians to securely review my medical records and prescribe
+                      the necessary medication if candidate. *
+                    </span>
                   </label>
                   <p className="lede">
                     Order via our secure portal. You will only be billed if approved by a licensed provider.
