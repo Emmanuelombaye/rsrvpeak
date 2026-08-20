@@ -501,18 +501,82 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .thumbs img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: normal; padding: 8px; }
 .kicker, .eyebrow { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--emerald); }
 .eyebrow { margin-bottom: 8px; }
-.doctor-photo { position: relative; max-width: 320px; }
+.doctor-section { padding: 80px 0; }
+.doctor {
+  width: min(72rem, 100%);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.doctor-visual { display: flex; justify-content: center; padding-bottom: 24px; }
+.doctor-photo { position: relative; width: 100%; max-width: 320px; }
 .doctor-photo .tilt {
   position: absolute; inset: 0; background: var(--mint); border-radius: 32px;
   transform: rotate(-3deg) scale(1.05); transition: transform .5s ease;
 }
 .doctor-photo:hover .tilt { transform: rotate(-6deg) scale(1.05); }
-.doctor-photo img {
-  position: relative; z-index: 1; width: 100%; aspect-ratio: 4/5; object-fit: cover;
-  object-position: top; border-radius: 32px; max-height: none;
-  transform: scale(1.05); transition: transform .7s ease;
+.doctor-brand {
+  position: relative; z-index: 1;
+  width: 100%; aspect-ratio: 4/5; border-radius: 32px; overflow: hidden;
+  background: #0a0a0a; color: #fff;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 28px 24px 36px;
+  box-shadow: 0 20px 40px rgb(0 0 0 / 0.12);
 }
-.doctor-photo:hover img { transform: scale(1.1); }
+.doctor-brand img { height: 28px; width: 110px; object-fit: contain; margin-bottom: auto; }
+.doctor-brand .eyebrow { color: var(--gold); margin: 0 0 10px; font-weight: 700; letter-spacing: .2em; }
+.doctor-brand h3 {
+  font-family: var(--font-serif); font-style: italic; font-weight: 400;
+  font-size: clamp(1.85rem, 4vw, 2.35rem); line-height: 1.05; letter-spacing: -.02em; color: #fff;
+}
+.doctor-brand p:last-child { margin-top: 12px; color: rgba(255,255,255,.72); font-size: 14px; line-height: 1.5; max-width: 16rem; }
+.doctor-cert {
+  position: absolute; z-index: 2; right: 0; bottom: -24px;
+  display: flex; align-items: center; gap: 16px;
+  background: #fff; border-radius: 16px; padding: 16px;
+  box-shadow: 0 20px 40px rgb(0 0 0 / 0.12);
+}
+.doctor-cert-icon {
+  width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
+  display: grid; place-items: center; background: var(--mint); color: var(--gold);
+}
+.doctor-cert-icon svg { width: 20px; height: 20px; }
+.doctor-cert p { margin: 0; }
+.doctor-cert p:first-child {
+  font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--sage);
+}
+.doctor-cert p:last-child {
+  font-family: var(--font-serif); font-style: italic; font-weight: 700; font-size: 14px; color: var(--charcoal);
+}
+.doctor-copy .eyebrow {
+  margin-bottom: 16px; font-weight: 700; letter-spacing: .2em; color: #c4a265;
+}
+.doctor-copy h2 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: .95; letter-spacing: -.03em; margin-bottom: 24px;
+}
+.doctor-copy h2 span { color: var(--sage); font-style: italic; }
+.doctor-role {
+  margin: 0 0 24px; font-size: 11px; font-weight: 700; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--gold);
+}
+.quote {
+  font-family: var(--font-sans); font-size: 16px; font-weight: 500; line-height: 1.65;
+  color: var(--muted); max-width: 28rem; margin: 0 0 40px;
+}
+.meta {
+  display: flex; flex-direction: column; gap: 24px;
+  border-top: 1px solid var(--line); padding-top: 32px; max-width: 28rem; margin-top: 0;
+}
+.meta-label {
+  margin: 0 0 8px; font-size: 10px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--sage);
+}
+.meta-value {
+  margin: 0; font-family: var(--font-serif); font-style: italic; font-size: 20px;
+  line-height: 1.2; color: var(--forest);
+}
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   border-radius: 999px; padding: 14px 22px; letter-spacing: .12em; text-transform: uppercase;
@@ -525,10 +589,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .btn-ghost { border: 1px solid var(--line); color: var(--forest); background: #fff; }
 .btn-ghost:hover { background: #fcfbf9; }
 
-.doctor { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center; }
-.doctor img { width: 100%; border-radius: 28px; object-fit: cover; max-height: 560px; }
-.quote { font-family: var(--font-serif); font-size: clamp(1.3rem, 2.4vw, 1.8rem); line-height: 1.35; color: var(--forest); }
-.meta { margin-top: 18px; display: grid; gap: 12px; color: var(--muted); font-size: 14px; }
 
 .faq { max-width: 760px; }
 .faq-kicker {
@@ -569,11 +629,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .btn-accent svg { width: 16px; height: 16px; transition: transform .15s ease; }
 .btn-accent:hover svg { transform: translate(4px, -4px); }
 
-.doc-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
-.doc-badges span {
-  border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px;
-  font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
-}
 .doctor h2 { font-family: var(--font-serif); font-style: italic; font-weight: 400; }
 
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
@@ -867,6 +922,16 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .doc-card h2 { margin: 8px 0 8px; font-size: 22px; }
 .doc-card p { margin: 0; }
 .doc-card:hover { border-color: color-mix(in oklab, var(--emerald) 45%, var(--line)); }
+@media (min-width: 640px) {
+  .meta { flex-direction: row; gap: 40px; }
+}
+@media (min-width: 768px) {
+  .doctor-section { padding: 128px 0; }
+  .doctor { grid-template-columns: 1fr 1fr; gap: 64px; }
+  .doctor-visual { justify-content: flex-start; }
+  .doctor-cert { right: 32px; }
+  .quote { font-size: 18px; }
+}
 @media (min-width: 800px) {
   .doc-grid { grid-template-columns: 1fr 1fr; }
   .compliance {
@@ -888,7 +953,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .steps-line { display: block; }
   .why-stage { display: flex; }
   .why-mobile { display: none; }
-  .doctor { grid-template-columns: .9fr 1.1fr; }
   .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
   .related-grid { grid-template-columns: 1fr 1fr; }
   .pdp { grid-template-columns: 1.05fr .95fr; }

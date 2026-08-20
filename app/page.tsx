@@ -63,39 +63,65 @@ export default function HomePage() {
 
       <ProtocolPicker />
 
-      <section className="section" id="doctor">
-        <div className="wrap doctor">
-          <div className="doctor-photo">
-            <div className="tilt" />
-            <img src={withBase("/assets/peakcare/avatar-doctor.png")} alt="Dr. Jerry J. Cattelane, D.O." />
-          </div>
-          <div>
-            <div className="doc-badges">
-              <span>Licensed</span>
-              <span>Board Certified</span>
-              <span>Trusted by Clinical Experts</span>
+      <section className="section doctor-section" id="doctor">
+        <div className="wrap">
+          <div className="doctor">
+          <div className="doctor-visual">
+            <div className="doctor-photo">
+              <div className="tilt" />
+              <article className="doctor-brand">
+                <img src={withBase("/logos/rsrv-wordmark.svg")} alt="RSRV" />
+                <p className="eyebrow">Clinical network</p>
+                <h3>
+                  Physician-led
+                  <br /> care.
+                </h3>
+                <p>Licensed clinicians in all 50 states. HIPAA compliant. U.S. compounding pharmacies.</p>
+              </article>
+              <aside className="doctor-cert">
+                <div className="doctor-cert-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <p>Licensed</p>
+                  <p>Board Certified</p>
+                </div>
+              </aside>
             </div>
+          </div>
+          <div className="doctor-copy">
+            <p className="eyebrow">Trusted by Clinical Experts</p>
             <h2>
-              Dr. Jerry J.
-              <br /> Cattelane, D.O.
+              RSRV
+              <br /> Clinical <span>Network</span>
             </h2>
-            <p className="lede">Medical Director & Lead Physician</p>
+            <p className="doctor-role">Physician-led care</p>
             <p className="quote">
               “Licensed nationwide, with extensive experience in telemedicine, clinical care, and metabolic health.
               Dedicated to helping patients achieve their wellness goals through evidence-based, personalized protocols.”
             </p>
             <div className="meta">
               <div>
-                <strong>Education</strong>
-                <br />
-                NY College of Osteopathic Medicine
+                <p className="meta-label">Coverage</p>
+                <p className="meta-value">Licensed providers in all 50 states</p>
               </div>
               <div>
-                <strong>Recognition</strong>
-                <br />
-                Educator of the Year · Patients&apos; Top Choice
+                <p className="meta-label">Compliance</p>
+                <p className="meta-value">
+                  HIPAA
+                  <br /> U.S. licensed pharmacies
+                </p>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </section>

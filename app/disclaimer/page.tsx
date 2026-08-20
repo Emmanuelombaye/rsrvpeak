@@ -44,9 +44,9 @@ export default function DisclaimerPage() {
       </p>
       <h2>Clinician and pharmacy independence</h2>
       <p>
-        Dr. Jerry J. Cattelane, D.O., and other clinicians in the nationwide network provide care as independent licensed
-        professionals. Pharmacies that fulfill RSRV orders are independently licensed. RSRV Health is a telehealth
-        technology platform and does not replace your clinician’s judgment.
+        Licensed clinicians in the nationwide network provide care as independent licensed professionals. Pharmacies that
+        fulfill RSRV orders are independently licensed. RSRV Health is a telehealth technology platform and does not
+        replace your clinician’s judgment.
       </p>
       <h2>Risks</h2>
       <p>
