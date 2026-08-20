@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/Reveal";
+import { SnapPager } from "@/components/SnapPager";
 import { withBase } from "@/lib/paths";
 
 const reasons = [
@@ -100,16 +101,18 @@ export function WhyCarousel() {
         <div className="why-product">
           <img src={withBase("/assets/peakcare/product-delivery-box.png")} alt="RSRV treatment box" />
         </div>
-        {reasons.map((reason) => (
-          <article className={`why-card ${reason.pos}`} key={`${reason.title}-m`}>
-            <span className="why-shine" aria-hidden="true" />
-            <div className="why-icon">
-              <Icon name={reason.icon} />
-            </div>
-            <h3>{reason.title}</h3>
-            <p>{reason.copy}</p>
-          </article>
-        ))}
+        <SnapPager className="why-mobile-pager" count={reasons.length}>
+          {reasons.map((reason) => (
+            <article className="why-card" key={`${reason.title}-m`}>
+              <span className="why-shine" aria-hidden="true" />
+              <div className="why-icon">
+                <Icon name={reason.icon} />
+              </div>
+              <h3>{reason.title}</h3>
+              <p>{reason.copy}</p>
+            </article>
+          ))}
+        </SnapPager>
       </div>
     </section>
   );

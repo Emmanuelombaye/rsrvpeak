@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/Reveal";
+import { SnapPager } from "@/components/SnapPager";
 
 function TicketForm() {
   return (
@@ -215,7 +216,7 @@ export function HowItWorks() {
           How it <span className="accent">works.</span>
         </h2>
         <p className="lede">A clinical protocol designed for seamless access to premium healthcare. No confusion or delays.</p>
-        <div className="steps">
+        <SnapPager className="steps-pager" trackClassName="steps" count={3}>
           <div className="steps-line" aria-hidden="true" />
           <article className="step">
             <div className="ticket-wrap">
@@ -255,7 +256,7 @@ export function HowItWorks() {
               <p>Your personalized plan is delivered. Begin your treatment with ongoing support from our team.</p>
             </div>
           </article>
-        </div>
+        </SnapPager>
       </Reveal>
     </section>
   );
