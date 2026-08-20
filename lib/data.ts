@@ -59,7 +59,7 @@ export const faqs = [
   },
   {
     q: "Who is eligible for treatment?",
-    a: "Eligibility is determined during your medical intake. A licensed U.S. provider reviews your history, current medications, and goals within 24 hours.",
+    a: "Eligibility is determined during your medical intake. Licensed providers in all 50 states review your history, current medications, and goals within 24 hours.",
   },
   {
     q: "How does RSRV work?",
@@ -111,6 +111,15 @@ export const documents = [
 export const companyPhone = {
   href: "tel:+19787407778",
   display: "+1 (978) 740-7778",
+} as const;
+
+export const companyAddress = {
+  name: "RSRV Health",
+  line1: "740 Reserve Drive, Suite 978",
+  city: "Peabody",
+  state: "MA",
+  zip: "01960",
+  display: "740 Reserve Drive, Suite 978, Peabody, MA 01960",
 } as const;
 
 export type LegalSlug = "terms" | "privacy" | "disclaimer" | "consent" | "hipaa";

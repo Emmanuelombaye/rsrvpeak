@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LegalLayout } from "@/components/LegalLayout";
+import { companyAddress } from "@/lib/data";
 
 export const metadata: Metadata = { title: { absolute: "Medical Disclaimer | RSRV" } };
 
@@ -43,7 +44,7 @@ export default function DisclaimerPage() {
       </p>
       <h2>Clinician and pharmacy independence</h2>
       <p>
-        Licensed U.S. clinicians provide care as independent licensed professionals. Pharmacies that
+        Licensed clinicians in the nationwide network provide care as independent licensed professionals. Pharmacies that
         fulfill RSRV orders are independently licensed. RSRV Health is a telehealth technology platform and does not
         replace your clinician’s judgment.
       </p>
@@ -59,6 +60,8 @@ export default function DisclaimerPage() {
         Clinical questions after you are a patient: message your assigned clinician through the Platform.
         <br />
         General: support@rsrv.health · +1 (978) 740-7778
+        <br />
+        {companyAddress.name}, {companyAddress.display}
       </p>
     </LegalLayout>
   );

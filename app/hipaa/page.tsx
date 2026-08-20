@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LegalLayout } from "@/components/LegalLayout";
+import { companyAddress } from "@/lib/data";
 
 export const metadata: Metadata = { title: { absolute: "HIPAA Notice of Privacy Practices | RSRV" } };
 
@@ -93,8 +94,11 @@ export default function HipaaPage() {
         <br />
         privacy@rsrv.health · legal@rsrv.health
         <br />
-        RSRV is a U.S. telehealth platform. Written HIPAA requests may be sent by email to privacy@rsrv.health. A physical
-        mailing address for legal notices is available upon request.
+        {companyAddress.name}
+        <br />
+        {companyAddress.line1}
+        <br />
+        {companyAddress.city}, {companyAddress.state} {companyAddress.zip}
       </p>
     </LegalLayout>
   );

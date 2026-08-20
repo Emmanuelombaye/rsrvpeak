@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LegalLayout } from "@/components/LegalLayout";
+import { companyAddress } from "@/lib/data";
 
 export const metadata: Metadata = { title: { absolute: "Terms of Service | RSRV" } };
 
@@ -28,8 +29,9 @@ export default function TermsPage() {
       </p>
       <h2>2. Eligibility</h2>
       <p>
-        You must be at least 18 years old and located in the United States to use the Platform. Treatment is available
-        only where a licensed clinician is authorized to practice and a licensed pharmacy can lawfully dispense.
+        You must be at least 18 years old and located in the United States to use the Platform. Licensed providers in the
+        RSRV network serve patients in all 50 states and the District of Columbia. Treatment is available only where a
+        licensed clinician is authorized to practice and a licensed pharmacy can lawfully dispense.
         Eligibility for any protocol is determined solely by a licensed clinician after review of your intake, history,
         medications, and goals. Submitting an intake does not guarantee a prescription.
       </p>
@@ -111,8 +113,11 @@ export default function TermsPage() {
         <br />
         Email: support@rsrv.health · Legal: legal@rsrv.health
         <br />
-        RSRV is a U.S. telehealth platform. Written notices may be sent by email to legal@rsrv.health. A physical mailing
-        address for legal notices is available upon request.
+        {companyAddress.name}
+        <br />
+        {companyAddress.line1}
+        <br />
+        {companyAddress.city}, {companyAddress.state} {companyAddress.zip}
       </p>
     </LegalLayout>
   );

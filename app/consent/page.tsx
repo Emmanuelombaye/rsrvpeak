@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LegalLayout } from "@/components/LegalLayout";
+import { companyAddress } from "@/lib/data";
 
 export const metadata: Metadata = { title: { absolute: "Telehealth Informed Consent | RSRV" } };
 
@@ -75,6 +76,8 @@ export default function ConsentPage() {
       <h2>10. Contact</h2>
       <p>
         RSRV Health · +1 (978) 740-7778 · support@rsrv.health · legal@rsrv.health
+        <br />
+        {companyAddress.display}
         <br />
         Clinical questions after you are a patient: message your assigned clinician through the Platform.
       </p>

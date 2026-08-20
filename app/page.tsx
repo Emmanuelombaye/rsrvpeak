@@ -53,7 +53,7 @@ export default function HomePage() {
               <img src={withBase("/assets/peakcare/avatar-team-2.png")} alt="" />
               <img src={withBase("/assets/peakcare/avatar-team-3.png")} alt="" />
             </div>
-            <h2>Network of U.S. Licensed Clinicians</h2>
+            <h2>Nationwide Network of U.S. Licensed Clinicians</h2>
             <p>Medical intake evaluation, continuous check-ins, and continuous care support.</p>
           </article>
           </SnapPager>
@@ -79,7 +79,7 @@ export default function HomePage() {
                   Physician-led
                   <br /> care.
                 </h3>
-                <p>Licensed U.S. clinicians. HIPAA compliant. U.S. compounding pharmacies.</p>
+                <p>Licensed clinicians in all 50 states. HIPAA compliant. U.S. compounding pharmacies.</p>
               </article>
               <aside className="doctor-cert">
                 <div className="doctor-cert-icon" aria-hidden="true">
@@ -114,7 +114,7 @@ export default function HomePage() {
             <div className="meta">
               <div>
                 <p className="meta-label">Coverage</p>
-                <p className="meta-value">Licensed U.S. clinicians review every intake</p>
+                <p className="meta-value">Licensed providers in all 50 states</p>
               </div>
               <div>
                 <p className="meta-label">Compliance</p>

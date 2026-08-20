@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FooterCompliance } from "@/components/FooterCompliance";
-import { companyPhone } from "@/lib/data";
+import { companyAddress, companyPhone } from "@/lib/data";
 import { withBase } from "@/lib/paths";
 
 export function Footer() {
@@ -19,8 +19,11 @@ export function Footer() {
                 <img src={withBase("/logos/rsrv-wordmark.svg")} alt="RSRV" />
               </Link>
               <p>
-                Physician-prescribed GLP-1 weight-management programs. HIPAA compliant, physician led, and pharmacy
-                integrated.
+                Physician-prescribed GLP-1 weight-management programs. Licensed providers in all 50 states. HIPAA
+                compliant, physician led, and pharmacy integrated.
+              </p>
+              <p>
+                {companyAddress.display}
               </p>
             </div>
             <div className="footer-links">

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { companyPhone } from "@/lib/data";
+import { companyAddress, companyPhone } from "@/lib/data";
 
 export const metadata: Metadata = { title: "Contact" };
 
@@ -20,10 +20,13 @@ export default function ContactPage() {
         <strong>Privacy:</strong> <a href="mailto:privacy@rsrv.health">privacy@rsrv.health</a>
         <br />
         <strong>Legal:</strong> <a href="mailto:legal@rsrv.health">legal@rsrv.health</a>
+        <br />
+        <strong>Mailing address:</strong> {companyAddress.name}, {companyAddress.display}
       </p>
       <p>
-        RSRV is a U.S. telehealth platform. There is no public storefront. For written legal or privacy notices, use the
-        emails above. A physical mailing address is available upon request.
+        RSRV is a U.S. telehealth platform serving patients nationwide. Licensed providers in all 50 states review
+        intakes. There is no public storefront; written legal and privacy notices may be sent to the mailing address
+        above.
       </p>
       <p>
         Typical clinician review is within 24 hours of a complete intake. You are not charged until a provider has

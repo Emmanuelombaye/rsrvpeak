@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LegalLayout } from "@/components/LegalLayout";
+import { companyAddress } from "@/lib/data";
 
 export const metadata: Metadata = { title: { absolute: "Privacy Policy | RSRV" } };
 
@@ -90,8 +91,7 @@ export default function PrivacyPage() {
       <p>
         Privacy questions: privacy@rsrv.health · +1 (978) 740-7778
         <br />
-        RSRV is a U.S. telehealth platform. Written privacy requests may be sent by email to privacy@rsrv.health. A
-        physical mailing address for legal notices is available upon request.
+        {companyAddress.name}, {companyAddress.display}
       </p>
     </LegalLayout>
   );
