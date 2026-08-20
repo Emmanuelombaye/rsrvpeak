@@ -1,32 +1,17 @@
 import type { NextConfig } from "next";
 
-const htmlPages = [
-  "shop",
-  "about",
-  "contact",
-  "documents",
-  "terms",
-  "privacy",
-  "disclaimer",
-  "consent",
-  "hipaa",
-  "tirzepatide",
-  "semaglutide",
-  "nad",
-  "sermorelin",
-] as const;
+const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "";
+const isGithubPages = process.env.GITHUB_PAGES === "true";
+const basePath = isGithubPages && repoName ? `/${repoName}` : "";
 
 const nextConfig: NextConfig = {
-  reactStrictMode: true,
-  async redirects() {
-    return [
-      { source: "/index.html", destination: "/", permanent: true },
-      ...htmlPages.map((page) => ({
-        source: `/${page}.html`,
-        destination: `/${page}`,
-        permanent: true,
-      })),
-    ];
+  output: "export",
+  trailingSlash: true,
+  images: { unoptimized: true },
+  basePath,
+  assetPrefix: basePath || undefined,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
   },
 };
 

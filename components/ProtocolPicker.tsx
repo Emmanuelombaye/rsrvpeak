@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { shopProtocols } from "@/lib/data";
+import { withBase } from "@/lib/paths";
 
 export function ProtocolPicker() {
   const [index, setIndex] = useState(0);
@@ -11,7 +12,7 @@ export function ProtocolPicker() {
   return (
     <div className="protocols">
       <div className="protocol-visual">
-        <img src={item.img} alt={item.name} />
+        <img src={withBase(item.img)} alt={item.name} />
       </div>
       <div className="protocol-copy">
         <div className="eyebrow">General</div>
@@ -30,7 +31,7 @@ export function ProtocolPicker() {
               className={n === index ? "active" : ""}
               onClick={() => setIndex(n)}
             >
-              <img src={protocol.img} alt={protocol.name} />
+              <img src={withBase(protocol.img)} alt={protocol.name} />
             </button>
           ))}
         </div>

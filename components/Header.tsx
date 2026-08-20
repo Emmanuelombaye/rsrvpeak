@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { withBase } from "@/lib/paths";
 
 function TickerRow() {
   return (
@@ -63,7 +64,7 @@ export function Header() {
           <span />
         </button>
         <Link className="logo" href="/" aria-label="Peakcare home">
-          <img src="/assets/peakcare/logo.png" alt="Peakcare" />
+          <img src={withBase("/assets/peakcare/logo.png")} alt="Peakcare" />
         </Link>
         <nav className="nav">
           <Link href="/shop">TREATMENTS</Link>

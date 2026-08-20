@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { products } from "@/lib/data";
+import { withBase } from "@/lib/paths";
 
 export const metadata: Metadata = {
   title: "Medical Protocols & Treatments",
@@ -20,7 +21,7 @@ export default function ShopPage() {
         {products.map((product) => (
           <article className="product-card" key={product.slug}>
             <div className="tag">{product.tag}</div>
-            <img src={product.img} alt={product.name} />
+            <img src={withBase(product.img)} alt={product.name} />
             <h3>{product.name}</h3>
             <p>Starting at {product.price.replace("/mo", "")}</p>
             <p>{product.copy}</p>

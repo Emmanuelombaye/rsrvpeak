@@ -1,11 +1,12 @@
 import Link from "next/link";
 import type { Product } from "@/lib/data";
+import { withBase } from "@/lib/paths";
 
 export function ProductDetail({ product }: { product: Product }) {
   return (
     <main className="wrap pdp">
       <div className="pdp-visual">
-        <img src={product.img} alt={product.name} />
+        <img src={withBase(product.img)} alt={product.name} />
       </div>
       <div>
         <div className="tag">{product.category}</div>

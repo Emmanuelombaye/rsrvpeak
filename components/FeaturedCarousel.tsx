@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { withBase } from "@/lib/paths";
 
 const slides = [
   {
@@ -60,7 +61,7 @@ export function FeaturedCarousel() {
       {slides.map((slide, n) =>
         slide.type === "lifestyle" ? (
           <div key={slide.alt} className={`slide slide-lifestyle${n === index ? " active" : ""}`}>
-            <img src={slide.img} alt={slide.alt} />
+            <img src={withBase(slide.img)} alt={slide.alt} />
             <div className="shade" />
             <span className="kicker-white">{slide.kicker}</span>
             <h3>{slide.title}</h3>
@@ -71,7 +72,7 @@ export function FeaturedCarousel() {
         ) : (
           <div key={slide.alt} className={`slide${n === index ? " active" : ""}`}>
             <div className="vial-wrap">
-              <img src={slide.img} alt={slide.alt} />
+              <img src={withBase(slide.img)} alt={slide.alt} />
             </div>
             <div className="product-footer">
               <Link className="pill" href={slide.href}>

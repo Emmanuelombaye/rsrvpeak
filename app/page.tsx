@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FaqList } from "@/components/FaqList";
 import { FeaturedCarousel } from "@/components/FeaturedCarousel";
 import { ProtocolPicker } from "@/components/ProtocolPicker";
+import { withBase } from "@/lib/paths";
 
 export default function HomePage() {
   return (
@@ -26,7 +27,7 @@ export default function HomePage() {
           <FeaturedCarousel />
 
           <Link className="card card-catalog" href="/shop">
-            <img className="bg" src="/assets/peakcare/lifestyle-hero.png" alt="" />
+            <img className="bg" src={withBase("/assets/peakcare/lifestyle-hero.png")} alt="" />
             <div className="shade" />
             <div className="catalog-content">
               <span className="badge">BROWSE CATALOG</span>
@@ -43,9 +44,9 @@ export default function HomePage() {
 
           <article className="card card-care">
             <div className="avatars">
-              <img src="/assets/peakcare/avatar-team-1.png" alt="" />
-              <img src="/assets/peakcare/avatar-team-2.png" alt="" />
-              <img src="/assets/peakcare/avatar-team-3.png" alt="" />
+              <img src={withBase("/assets/peakcare/avatar-team-1.png")} alt="" />
+              <img src={withBase("/assets/peakcare/avatar-team-2.png")} alt="" />
+              <img src={withBase("/assets/peakcare/avatar-team-3.png")} alt="" />
             </div>
             <h2>Nationwide Network of U.S. Licensed Clinicians</h2>
             <p>Medical intake evaluation, continuous check-ins, and continuous care support.</p>
@@ -176,7 +177,7 @@ export default function HomePage() {
         <div className="wrap doctor">
           <div className="doctor-photo">
             <div className="tilt" />
-            <img src="/assets/peakcare/avatar-doctor.png" alt="Dr. Jerry J. Cattelane, D.O." />
+            <img src={withBase("/assets/peakcare/avatar-doctor.png")} alt="Dr. Jerry J. Cattelane, D.O." />
           </div>
           <div>
             <div className="eyebrow">Licensed · Board Certified · Trusted by Clinical Experts</div>
@@ -207,7 +208,7 @@ export default function HomePage() {
       </section>
 
       <section className="cta">
-        <img src="/assets/peakcare/lifestyle-footer.png" alt="" />
+        <img src={withBase("/assets/peakcare/lifestyle-footer.png")} alt="" />
         <div className="shade" />
         <div className="cta-inner">
           <h2>Achieve lasting vitality with clinical-grade treatments.</h2>
