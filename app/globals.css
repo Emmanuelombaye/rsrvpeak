@@ -162,9 +162,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   min-width: 0;
 }
 .slide-lifestyle { display: flex; flex-direction: column; justify-content: flex-end; padding: 24px; color: #fff; }
-.slide-lifestyle img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
+.slide-lifestyle img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; filter: saturate(1.05) contrast(1.04); transition: transform .7s ease; }
 .card-product:hover .slide-lifestyle img { transform: scale(1.05); }
-.slide-lifestyle .shade { background: linear-gradient(to top, rgba(0,0,0,.9), rgba(0,0,0,.3), transparent); }
+.slide-lifestyle .shade { background: linear-gradient(to top, rgba(17,17,17,.62), rgba(17,17,17,.16), transparent); }
 .slide-lifestyle .kicker-white { position: relative; z-index: 1; font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.8); }
 .slide-lifestyle h3 { position: relative; z-index: 1; margin: 8px 0 16px; font-family: var(--font-serif); font-size: clamp(1.6rem, 2.4vw, 2.25rem); font-weight: 400; font-style: italic; }
 .explore {

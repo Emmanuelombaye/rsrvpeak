@@ -8,7 +8,7 @@ const slides = [
   {
     type: "lifestyle" as const,
     img: "/assets/peakcare/lifestyle-slider-1.png",
-    alt: "Medical Weight Loss",
+    alt: "Empty RSRV consultation suite",
     kicker: "Physician-prescribed protocol",
     title: "Medical Weight Loss",
     href: "/shop",

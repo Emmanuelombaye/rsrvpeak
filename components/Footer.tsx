@@ -43,8 +43,12 @@ export function Footer() {
                 <h5>SUPPORT</h5>
                 <Link href="/#faq">FAQs</Link>
                 <Link href="/contact">Support</Link>
+                <Link href="/documents">Documents</Link>
                 <Link href="/terms">Terms of Service</Link>
                 <Link href="/privacy">Privacy Policy</Link>
+                <Link href="/disclaimer">Medical Disclaimer</Link>
+                <Link href="/consent">Telehealth Consent</Link>
+                <Link href="/hipaa">HIPAA Notice</Link>
               </div>
             </div>
           </div>
