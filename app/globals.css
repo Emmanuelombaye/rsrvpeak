@@ -435,6 +435,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   font-weight: 400;
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   color: #fff;
+}
+.protocol-meta {
   position: absolute;
   top: 7rem;
   left: 3rem;
@@ -448,6 +450,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   font-size: clamp(2rem, 4vw, 3.75rem);
   line-height: 1.05;
   color: #fff;
+  margin: 4px 0 10px;
+}
 .protocol-visual {
   position: absolute;
   inset: 12% 0 18%;
