@@ -8,7 +8,7 @@ export default function AboutPage() {
     <main className="wrap legal">
       <h1>About Us</h1>
       <p>
-        Peakcare is a telehealth platform connecting patients with licensed providers and pharmacies for personalized,
+        RSRV is a telehealth platform connecting patients with licensed providers and pharmacies for personalized,
         compounded treatments. While we are best known for our GLP-1 weight management programs, we also support patients
         across other health needs with tailored, science-backed care.
       </p>

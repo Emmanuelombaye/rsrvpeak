@@ -63,8 +63,8 @@ export function Header() {
           <span />
           <span />
         </button>
-        <Link className="logo" href="/" aria-label="Peakcare home">
-          <img src={withBase("/assets/peakcare/logo.png")} alt="Peakcare" />
+        <Link className="logo" href="/" aria-label="RSRV home">
+          <img src={withBase("/assets/peakcare/logo.png")} alt="RSRV" />
         </Link>
         <nav className="nav">
           <Link href="/shop">TREATMENTS</Link>

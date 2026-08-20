@@ -20,8 +20,8 @@ const instrument = Instrument_Serif({
 
 export const metadata: Metadata = {
   title: {
-    default: "Peakcare | Longevity Science, Optimized for You",
-    template: "%s | Peakcare",
+    default: "RSRV | Longevity Science, Optimized for You",
+    template: "%s | RSRV",
   },
   description:
     "Physician-prescribed metabolic, longevity, and performance protocols. HIPAA compliant, physician led, and pharmacy integrated.",

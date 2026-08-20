@@ -80,15 +80,15 @@ export const shopProtocols = products.slice(0, 3);
 
 export const faqs = [
   {
-    q: "What is Peakcare?",
-    a: "Peakcare is a telehealth platform connecting patients with licensed providers and pharmacies for personalized, compounded treatments. While we are best known for our GLP-1 weight management programs, we also support patients across other health needs with tailored, science-backed care.",
+    q: "What is RSRV?",
+    a: "RSRV is a telehealth platform connecting patients with licensed providers and pharmacies for personalized, compounded treatments. While we are best known for our GLP-1 weight management programs, we also support patients across other health needs with tailored, science-backed care.",
   },
   {
     q: "Who is eligible for treatment?",
     a: "Eligibility is determined during your medical intake. A licensed U.S. provider reviews your history, current medications, and goals within 24 hours.",
   },
   {
-    q: "How does Peakcare work?",
+    q: "How does RSRV work?",
     a: "Choose a protocol, complete your intake, and receive a provider review within 24 hours. If approved, your medication ships overnight, cold-chain.",
   },
   {

@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="footer">
       <div className="wrap footer-grid">
         <div>
-          <div className="wordmark">peakcare</div>
+          <div className="wordmark">RSRV</div>
           <p>
             The definitive infrastructure for specialized medical care and performance protocols. HIPAA compliant,
             physician led, and pharmacy integrated.
@@ -45,7 +45,7 @@ export function Footer() {
           HIPAA Notice.
         </p>
         <div className="footer-bottom">
-          <span>© {year} Peakcare. All rights reserved.</span>
+          <span>© {year} RSRV. All rights reserved.</span>
           <span>
             <a href="#">LINKEDIN</a> · <a href="#">INSTAGRAM</a> · <a href="#">FACEBOOK</a>
           </span>

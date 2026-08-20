@@ -13,6 +13,7 @@ export default function HomePage() {
           <span />
         </div>
         <section className="wrap hero">
+          <div className="eyebrow">RSRV</div>
           <h1>
             <span className="amber">Redefine your health</span>
             <br /> and feel better than ever.
@@ -30,7 +31,7 @@ export default function HomePage() {
             <img className="bg" src={withBase("/assets/peakcare/lifestyle-hero.png")} alt="" />
             <div className="shade" />
             <div className="catalog-content">
-              <span className="badge">BROWSE CATALOG</span>
+              <span className="badge">RSRV CATALOG</span>
               <h2>Explore all protocols.</h2>
               <p>Customized treatments for weight loss, longevity, and recovery.</p>
               <span className="shop-all">
@@ -112,7 +113,7 @@ export default function HomePage() {
       <section className="section why center" id="why">
         <div className="wrap">
           <h2>
-            Why <span className="accent">Peakcare?</span>
+            Why <span className="accent">RSRV?</span>
           </h2>
           <p className="lede">
             A daily combination of medical-grade treatments designed to support longevity, maintain metabolic balance,

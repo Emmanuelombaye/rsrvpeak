@@ -12,11 +12,11 @@ export default function ContactPage() {
         shipping, or billing questions, use the contacts below.
       </p>
       <p>
-        <strong>Support:</strong> <a href="mailto:support@peakcare.health">support@peakcare.health</a>
+        <strong>Support:</strong> <a href="mailto:support@rsrv.health">support@rsrv.health</a>
         <br />
-        <strong>Privacy:</strong> <a href="mailto:privacy@peakcare.health">privacy@peakcare.health</a>
+        <strong>Privacy:</strong> <a href="mailto:privacy@rsrv.health">privacy@rsrv.health</a>
         <br />
-        <strong>Legal:</strong> <a href="mailto:legal@peakcare.health">legal@peakcare.health</a>
+        <strong>Legal:</strong> <a href="mailto:legal@rsrv.health">legal@rsrv.health</a>
       </p>
       <p>
         Typical clinician review is within 24 hours of a complete intake. You are not charged until a provider has

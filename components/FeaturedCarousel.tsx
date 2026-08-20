@@ -19,14 +19,14 @@ const slides = [
     img: "/assets/peakcare/semaglutide.png",
     alt: "Semaglutide+",
     href: "/semaglutide",
-    cta: "Featured: Semaglutide+",
+    cta: "Featured: RSRV Semaglutide+",
   },
   {
     type: "product" as const,
     img: "/assets/peakcare/sermorelin-brand.png",
     alt: "Sermorelin",
     href: "/sermorelin",
-    cta: "Featured: Sermorelin",
+    cta: "Featured: RSRV Sermorelin",
   },
 ];
 

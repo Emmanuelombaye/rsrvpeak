@@ -53,7 +53,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .menu-btn { width: 22px; height: 14px; display: flex; flex-direction: column; justify-content: space-between; justify-self: start; }
 .menu-btn span { display: block; height: 1.5px; background: var(--forest); }
 .logo { display: flex; align-items: center; justify-self: center; }
-.logo img { height: 28px; width: auto; }
+.logo img { height: 36px; width: auto; }
 .nav { justify-self: end; display: flex; gap: 24px; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; color: var(--forest); }
 .nav a:hover { color: var(--emerald); }
 
@@ -324,7 +324,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .footer a { display: block; color: var(--muted); margin-bottom: 8px; font-size: 14px; }
 .footer a:hover { color: var(--emerald); }
 .footer-bottom { margin-top: 36px; display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 12px; flex-wrap: wrap; }
-.wordmark { font-size: 42px; letter-spacing: .06em; font-weight: 600; color: var(--forest); text-transform: lowercase; }
+.wordmark { font-family: var(--font-serif); font-size: 42px; letter-spacing: .18em; font-weight: 400; color: var(--forest); text-transform: uppercase; }
 
 .disclaimer-bar { font-size: 12px; color: var(--muted); line-height: 1.55; padding: 18px 0 8px; }
 .disclaimer-bar a,
