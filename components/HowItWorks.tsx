@@ -1,24 +1,24 @@
 import { Reveal } from "@/components/Reveal";
-import { SnapPager } from "@/components/SnapPager";
+import { SlideShow } from "@/components/SlideShow";
 
-function TicketForm() {
+function TicketForm({ uid = "form" }: { uid?: string }) {
   return (
     <svg viewBox="0 0 400 300" className="ticket-art" fill="none" preserveAspectRatio="xMidYMid meet">
       <defs>
-        <linearGradient id="formGrad" x1="0" y1="0" x2="1" y2="1">
+        <linearGradient id={`${uid}-formGrad`} x1="0" y1="0" x2="1" y2="1">
           <stop offset="0%" stopColor="#ffffff" />
           <stop offset="100%" stopColor="#fbfaf7" />
         </linearGradient>
-        <radialGradient id="formBlob" cx="0" cy="0" r="1">
+        <radialGradient id={`${uid}-formBlob`} cx="0" cy="0" r="1">
           <stop offset="0%" stopColor="#F3EFE4" />
           <stop offset="100%" stopColor="#F3EFE4" stopOpacity="0" />
         </radialGradient>
-        <filter id="ff-shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <filter id={`${uid}-ff-shadow`} x="-20%" y="-20%" width="140%" height="140%">
           <feDropShadow dx="0" dy="8" stdDeviation="10" floodColor="#111111" floodOpacity="0.08" />
         </filter>
       </defs>
-      <rect width="400" height="300" rx="20" fill="url(#formGrad)" />
-      <circle cx="30" cy="20" r="120" fill="url(#formBlob)" />
+      <rect width="400" height="300" rx="20" fill={`url(#${uid}-formGrad)`} />
+      <circle cx="30" cy="20" r="120" fill={`url(#${uid}-formBlob)`} />
       <text x="30" y="46" fontSize="21" fontWeight="600" fill="#2D2D2D" fontFamily="serif">
         Health Questionnaire
       </text>
@@ -51,12 +51,12 @@ function TicketForm() {
       </text>
       <rect x="42" y="219" width="150" height="8" rx="4" fill="#D9CFBE" />
       <path d="M334 214l4 4 4-4" stroke="#8A8477" strokeWidth="1.6" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-      <rect x="30" y="254" width="340" height="30" rx="15" fill="#C4A265" filter="url(#ff-shadow)" />
+      <rect x="30" y="254" width="340" height="30" rx="15" fill="#C4A265" filter={`url(#${uid}-ff-shadow)`} />
       <text x="192" y="273" fontSize="14" fontWeight="600" fill="#111111" textAnchor="middle">
         Submit Profile
       </text>
       <path d="M330 264l6 5-6 5" stroke="#111111" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-      <g filter="url(#ff-shadow)">
+      <g filter={`url(#${uid}-ff-shadow)`}>
         <rect x="255" y="18" width="115" height="30" rx="15" fill="white" stroke="#F3EFE4" strokeWidth="2" />
         <circle cx="273" cy="33" r="5" fill="#C4A265" />
         <text x="285" y="37" fontSize="10.5" fontWeight="600" fill="#2D2D2D">
@@ -67,20 +67,20 @@ function TicketForm() {
   );
 }
 
-function TicketChat() {
+function TicketChat({ uid = "chat" }: { uid?: string }) {
   return (
     <svg viewBox="0 0 400 300" className="ticket-art" fill="none" preserveAspectRatio="xMidYMid meet">
       <defs>
-        <filter id="cc-shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <filter id={`${uid}-cc-shadow`} x="-20%" y="-20%" width="140%" height="140%">
           <feDropShadow dx="0" dy="8" stdDeviation="10" floodColor="#111111" floodOpacity="0.08" />
         </filter>
-        <linearGradient id="avatarGrad" x1="0" y1="0" x2="1" y2="1">
+        <linearGradient id={`${uid}-avatarGrad`} x1="0" y1="0" x2="1" y2="1">
           <stop offset="0%" stopColor="#C4A265" />
           <stop offset="100%" stopColor="#a9884f" />
         </linearGradient>
       </defs>
       <rect width="400" height="300" rx="20" fill="#ffffff" />
-      <circle cx="46" cy="34" r="16" fill="url(#avatarGrad)" />
+      <circle cx="46" cy="34" r="16" fill={`url(#${uid}-avatarGrad)`} />
       <text x="46" y="38" fontSize="12" fontWeight="700" fill="white" textAnchor="middle">
         MC
       </text>
@@ -106,7 +106,7 @@ function TicketChat() {
       <text x="64" y="132" fontSize="9" fill="#B4AC9C">
         10:41 AM
       </text>
-      <path d="M336 150H110a12 12 0 0 0-12 12v14a12 12 0 0 0 12 12h226l16 12v-38a12 12 0 0 0-12-12Z" fill="#F3EFE4" filter="url(#cc-shadow)" />
+      <path d="M336 150H110a12 12 0 0 0-12 12v14a12 12 0 0 0 12 12h226l16 12v-38a12 12 0 0 0-12-12Z" fill="#F3EFE4" filter={`url(#${uid}-cc-shadow)`} />
       <text x="330" y="169" fontSize="11.5" fill="#111111" textAnchor="end">
         That&apos;s common and usually
       </text>
@@ -125,7 +125,7 @@ function TicketChat() {
       <text x="34" y="279" fontSize="10.5" fill="#B4AC9C">
         Message Dr. Chen…
       </text>
-      <circle cx="358" cy="275" r="14" fill="#C4A265" filter="url(#cc-shadow)" />
+      <circle cx="358" cy="275" r="14" fill="#C4A265" filter={`url(#${uid}-cc-shadow)`} />
       <g transform="translate(351 267)" stroke="#ffffff" strokeWidth="1.6" fill="none" strokeLinecap="round" strokeLinejoin="round">
         <path d="M0 8L16 0.5 9.5 16 7 9.5 0 8Z" />
       </g>
@@ -133,11 +133,11 @@ function TicketChat() {
   );
 }
 
-function TicketPlan() {
+function TicketPlan({ uid = "plan" }: { uid?: string }) {
   return (
     <svg viewBox="0 0 400 300" className="ticket-art" fill="none" preserveAspectRatio="xMidYMid meet">
       <defs>
-        <filter id="tt-shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <filter id={`${uid}-tt-shadow`} x="-20%" y="-20%" width="140%" height="140%">
           <feDropShadow dx="0" dy="6" stdDeviation="8" floodColor="#111111" floodOpacity="0.06" />
         </filter>
       </defs>
@@ -145,7 +145,7 @@ function TicketPlan() {
       <text x="30" y="40" fontSize="21" fontWeight="600" fill="#2D2D2D" fontFamily="serif">
         Treatment Plan
       </text>
-      <g filter="url(#tt-shadow)">
+      <g filter={`url(#${uid}-tt-shadow)`}>
         <rect x="286" y="18" width="84" height="26" rx="13" fill="#F3EFE4" />
         <text x="328" y="35" fontSize="10.5" fontWeight="700" fill="#111111" textAnchor="middle">
           Day 3 / 30
@@ -153,7 +153,7 @@ function TicketPlan() {
       </g>
       <line x1="47" y1="80" x2="47" y2="256" stroke="#E8E3D4" strokeWidth="2" />
       <line x1="47" y1="80" x2="47" y2="146" stroke="#C4A265" strokeWidth="2" />
-      <circle cx="47" cy="80" r="18" fill="#C4A265" filter="url(#tt-shadow)" />
+      <circle cx="47" cy="80" r="18" fill="#C4A265" filter={`url(#${uid}-tt-shadow)`} />
       <g transform="translate(38 71)" stroke="#ffffff" strokeWidth="1.6" fill="none" strokeLinejoin="round">
         <rect x="0" y="2" width="13" height="10" rx="1.5" />
         <path d="M13 6h5l3 3.5V12h-8z" />
@@ -216,12 +216,12 @@ export function HowItWorks() {
           How it <span className="accent">works.</span>
         </h2>
         <p className="lede">A clinical protocol designed for seamless access to premium healthcare. No confusion or delays.</p>
-        <SnapPager className="steps-pager" trackClassName="steps" count={3}>
+        <div className="steps">
           <div className="steps-line" aria-hidden="true" />
           <article className="step">
             <div className="ticket-wrap">
               <div className="ticket cut-tr">
-                <TicketForm />
+                <TicketForm uid="desk-form" />
               </div>
               <StepArrow />
             </div>
@@ -234,7 +234,7 @@ export function HowItWorks() {
           <article className="step">
             <div className="ticket-wrap">
               <div className="ticket cut-tl">
-                <TicketChat />
+                <TicketChat uid="desk-chat" />
               </div>
               <StepArrow />
             </div>
@@ -247,7 +247,7 @@ export function HowItWorks() {
           <article className="step">
             <div className="ticket-wrap">
               <div className="ticket cut-tr">
-                <TicketPlan />
+                <TicketPlan uid="desk-plan" />
               </div>
             </div>
             <div className="step-copy">
@@ -256,7 +256,41 @@ export function HowItWorks() {
               <p>Your personalized plan is delivered. Begin your treatment with ongoing support from our team.</p>
             </div>
           </article>
-        </SnapPager>
+        </div>
+        <SlideShow className="how-slideshow" autoplayMs={4200}>
+          {[
+            <article className="how-slide-card cut-tr" key="s1">
+              <div className="how-slide-art">
+                <TicketForm uid="mob-form" />
+              </div>
+              <div className="step-copy">
+                <div className="step-badge">Step 1</div>
+                <h3>Health Profile</h3>
+                <p>Fill out a quick questionnaire. Payment is only charged after your treatment plan is approved.</p>
+              </div>
+            </article>,
+            <article className="how-slide-card cut-tl" key="s2">
+              <div className="how-slide-art">
+                <TicketChat uid="mob-chat" />
+              </div>
+              <div className="step-copy">
+                <div className="step-badge">Step 2</div>
+                <h3>Doctor Review & Chat</h3>
+                <p>A licensed provider will carefully review your information and chat with you to create a plan.</p>
+              </div>
+            </article>,
+            <article className="how-slide-card cut-tr" key="s3">
+              <div className="how-slide-art">
+                <TicketPlan uid="mob-plan" />
+              </div>
+              <div className="step-copy">
+                <div className="step-badge">Step 3</div>
+                <h3>Begin Your Treatment</h3>
+                <p>Your personalized plan is delivered. Begin your treatment with ongoing support from our team.</p>
+              </div>
+            </article>,
+          ]}
+        </SlideShow>
       </Reveal>
     </section>
   );

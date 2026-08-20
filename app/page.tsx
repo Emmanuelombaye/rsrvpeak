@@ -3,6 +3,7 @@ import { FaqList } from "@/components/FaqList";
 import { FeaturedCarousel } from "@/components/FeaturedCarousel";
 import { HowItWorks } from "@/components/HowItWorks";
 import { ProtocolPicker } from "@/components/ProtocolPicker";
+import { SnapPager } from "@/components/SnapPager";
 import { WhyCarousel } from "@/components/WhyCarousel";
 import { withBase } from "@/lib/paths";
 
@@ -24,7 +25,8 @@ export default function HomePage() {
           </p>
         </section>
 
-        <section className="wrap cards">
+        <section className="wrap">
+          <SnapPager className="hero-cards-pager" trackClassName="cards" count={3}>
           <FeaturedCarousel />
 
           <Link className="card card-catalog" href="/shop">
@@ -54,6 +56,7 @@ export default function HomePage() {
             <h2>Nationwide Network of U.S. Licensed Clinicians</h2>
             <p>Medical intake evaluation, continuous check-ins, and continuous care support.</p>
           </article>
+          </SnapPager>
         </section>
       </div>
 

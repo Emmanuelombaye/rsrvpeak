@@ -1,17 +1,28 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { withBase } from "@/lib/paths";
 
 const slides = [
   {
+    type: "lifestyle" as const,
+    img: "/assets/peakcare/lifestyle-slider-1.png",
+    alt: "Medical Weight Loss",
+    kicker: "Clinically Proven Protocol",
+    title: "Medical Weight Loss",
+    href: "/shop",
+    cta: "Explore Protocol",
+  },
+  {
+    type: "product" as const,
     img: "/assets/peakcare/tirzepatide.png",
     alt: "Tirzepatide (GLP-1) Therapy",
     href: "/tirzepatide",
     cta: "Featured: Tirzepatide Therapy",
   },
   {
+    type: "product" as const,
     img: "/assets/peakcare/semaglutide.png",
     alt: "Semaglutide (GLP-1) Therapy",
     href: "/semaglutide",
@@ -22,6 +33,13 @@ const slides = [
 export function FeaturedCarousel() {
   const [index, setIndex] = useState(0);
   const last = slides.length - 1;
+
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      setIndex((value) => (value === last ? 0 : value + 1));
+    }, 4200);
+    return () => window.clearInterval(id);
+  }, [index, last]);
 
   return (
     <article className="card card-product">
@@ -47,23 +65,48 @@ export function FeaturedCarousel() {
           </svg>
         </button>
       </div>
-      {slides.map((slide, n) => (
-        <div key={slide.alt} className={`slide${n === index ? " active" : ""}`}>
-          <div className="vial-wrap">
-            <img src={withBase(slide.img)} alt={slide.alt} />
+      <div className="slide-track" style={{ transform: `translate3d(-${index * 100}%, 0, 0)` }}>
+        {slides.map((slide) => (
+          <div key={slide.alt} className={`slide${slide.type === "lifestyle" ? " slide-lifestyle" : ""}`}>
+            {slide.type === "lifestyle" ? (
+              <>
+                <img src={withBase(slide.img)} alt={slide.alt} />
+                <div className="shade" />
+                <span className="kicker-white">{slide.kicker}</span>
+                <h3>{slide.title}</h3>
+                <Link className="explore" href={slide.href}>
+                  {slide.cta}
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M4 12L12 4M12 4H6.5M12 4v5.5" stroke="currentColor" strokeWidth="1.5" />
+                  </svg>
+                </Link>
+              </>
+            ) : (
+              <>
+                <div className="vial-wrap">
+                  <img src={withBase(slide.img)} alt={slide.alt} />
+                </div>
+                <div className="product-footer">
+                  <Link className="pill" href={slide.href}>
+                    {slide.cta}
+                  </Link>
+                </div>
+              </>
+            )}
           </div>
-          <div className="product-footer">
-            <Link className="pill" href={slide.href}>
-              {slide.cta}
-            </Link>
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
       <div className="product-footer" style={{ pointerEvents: "none" }}>
         <span />
         <div className="dots" style={{ pointerEvents: "auto" }}>
           {slides.map((slide, n) => (
-            <span key={slide.alt} className={n === index ? "active" : ""} />
+            <button
+              key={slide.alt}
+              type="button"
+              className={n === index ? "active" : ""}
+              aria-label={`Show ${slide.alt}`}
+              onClick={() => setIndex(n)}
+            />
           ))}
         </div>
       </div>
