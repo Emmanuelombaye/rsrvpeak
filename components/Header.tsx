@@ -38,7 +38,7 @@ function TickerRow() {
             strokeLinejoin="round"
           />
         </svg>
-        Free Expedited Shipment
+        Free Expedited Shipping
       </span>
     </div>
   );
@@ -57,23 +57,28 @@ export function Header() {
           <TickerRow />
         </div>
       </div>
-      <header className="header">
-        <button className="menu-btn" type="button" aria-label="Open menu" onClick={() => setOpen(true)}>
-          <span />
-          <span />
-          <span />
-        </button>
-        <Link className="logo" href="/" aria-label="RSRV home">
-          <img src={withBase("/assets/peakcare/logo.png")} alt="RSRV" />
-        </Link>
-        <nav className="nav">
-          <Link href="/shop">TREATMENTS</Link>
-          <Link href="/shop">SHOP</Link>
-        </nav>
-      </header>
+      <div className="header-bar">
+        <header className="header">
+          <button className="menu-btn" type="button" aria-label="Open menu" onClick={() => setOpen(true)}>
+            <span />
+            <span />
+            <span />
+          </button>
+          <Link className="logo" href="/" aria-label="RSRV home">
+            <img src={withBase("/assets/peakcare/logo.png")} alt="RSRV" />
+          </Link>
+          <nav className="nav">
+            <Link href="/shop">TREATMENTS</Link>
+            <Link href="/shop">SHOP</Link>
+          </nav>
+        </header>
+      </div>
       <div className={`menu${open ? " open" : ""}`}>
         <button className="menu-backdrop" type="button" aria-label="Close menu" onClick={() => setOpen(false)} />
         <aside className="menu-panel">
+          <button className="menu-close" type="button" aria-label="Close menu" onClick={() => setOpen(false)}>
+            Close
+          </button>
           <Link href="/shop" onClick={() => setOpen(false)}>
             Treatments
           </Link>

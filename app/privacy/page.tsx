@@ -88,7 +88,7 @@ export default function PrivacyPage() {
       <p>We may update this Policy by posting a new version with a revised effective date.</p>
       <h2>12. Contact</h2>
       <p>
-        Privacy questions: privacy@rsrv.health
+        Privacy questions: privacy@rsrv.health · +1 (978) 740-7778
         <br />
         RSRV Health — mailing address to be inserted by RSRV.
       </p>

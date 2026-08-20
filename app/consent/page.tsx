@@ -74,7 +74,7 @@ export default function ConsentPage() {
       </p>
       <h2>10. Contact</h2>
       <p>
-        RSRV Health · support@rsrv.health · legal@rsrv.health
+        RSRV Health · +1 (978) 740-7778 · support@rsrv.health · legal@rsrv.health
         <br />
         Clinical questions after you are a patient: message your assigned clinician through the Platform.
       </p>

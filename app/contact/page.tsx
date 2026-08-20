@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { companyPhone } from "@/lib/data";
 
 export const metadata: Metadata = { title: "Contact" };
 
@@ -12,6 +13,8 @@ export default function ContactPage() {
         shipping, or billing questions, use the contacts below.
       </p>
       <p>
+        <strong>Phone:</strong> <a href={companyPhone.href}>{companyPhone.display}</a>
+        <br />
         <strong>Support:</strong> <a href="mailto:support@rsrv.health">support@rsrv.health</a>
         <br />
         <strong>Privacy:</strong> <a href="mailto:privacy@rsrv.health">privacy@rsrv.health</a>

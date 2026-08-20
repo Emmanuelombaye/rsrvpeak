@@ -89,6 +89,8 @@ export default function HipaaPage() {
       <p>
         Privacy Officer · RSRV Health
         <br />
+        Phone: +1 (978) 740-7778
+        <br />
         privacy@rsrv.health · legal@rsrv.health
         <br />
         Mailing address: to be inserted by RSRV (registered office / principal place of business).

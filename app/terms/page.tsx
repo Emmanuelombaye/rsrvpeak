@@ -107,6 +107,8 @@ export default function TermsPage() {
       <p>
         RSRV Health
         <br />
+        Phone: +1 (978) 740-7778
+        <br />
         Email: support@rsrv.health · Legal: legal@rsrv.health
         <br />
         Mailing address: to be inserted by RSRV (registered office / principal place of business).

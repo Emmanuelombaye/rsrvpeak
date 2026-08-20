@@ -8,37 +8,48 @@ import { withBase } from "@/lib/paths";
 export function ProtocolPicker() {
   const [index, setIndex] = useState(0);
   const item = shopProtocols[index];
+  const watermark = item.name.split(" ")[0].replace("+", "").toUpperCase();
+  const price = item.price.replace(".00", "");
 
   return (
-    <div className="protocols">
-      <div className="protocol-visual">
-        <img src={withBase(item.img)} alt={item.name} />
-      </div>
-      <div className="protocol-copy">
-        <div className="eyebrow">General</div>
-        <h3 className="display">{item.name}</h3>
-        <div className="eyebrow">Prescription Grade Protocol</div>
-        <div className="price">
-          <span>STARTING AT</span>
-          {item.price}
+    <section className="protocol-stage" id="shop">
+      <div className="protocol-inner">
+        <h2 className="watermark">{watermark}</h2>
+        <h2 className="protocol-title">Shop our best protocols</h2>
+        <div className="protocol-meta">
+          <div className="eyebrow">{item.category}</div>
+          <h3>{item.name}</h3>
+          <div className="eyebrow">Prescription Grade Protocol</div>
         </div>
-        <p className="lede">{item.copy}</p>
-        <div className="thumbs">
-          {shopProtocols.map((protocol, n) => (
-            <button
-              key={protocol.slug}
-              type="button"
-              className={n === index ? "active" : ""}
-              onClick={() => setIndex(n)}
-            >
-              <img src={withBase(protocol.img)} alt={protocol.name} />
-            </button>
-          ))}
-        </div>
-        <Link className="btn btn-primary" href={item.href}>
+        <Link href={item.href} className="protocol-visual">
+          <img src={withBase(item.img)} alt={item.name} />
+        </Link>
+        <div className="protocol-bottom">
+          <div className="thumbs">
+            {shopProtocols.map((protocol, n) => (
+              <button
+                key={protocol.slug}
+                type="button"
+                className={n === index ? "active" : ""}
+                aria-label={`Select ${protocol.name}`}
+                onClick={() => setIndex(n)}
+              >
+                <img src={withBase(protocol.img)} alt={protocol.name} />
+              </button>
+            ))}
+          </div>
+          <div className="protocol-card">
+            <div className="price">
+              <span>Starting at</span>
+              {price}
+            </div>
+            <p className="lede">{item.copy}</p>
+        <Link className="btn btn-primary" href={`/checkout?product=${item.slug}`}>
           Start Treatment
         </Link>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

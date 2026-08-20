@@ -17,21 +17,21 @@ const slides = [
   {
     type: "product" as const,
     img: "/assets/peakcare/semaglutide.png",
-    alt: "Semaglutide+",
+    alt: "Semaglutide (GLP-1) Therapy",
     href: "/semaglutide",
-    cta: "Featured: RSRV Semaglutide+",
+    cta: "Featured: Semaglutide (GLP-1) Therapy",
   },
   {
     type: "product" as const,
-    img: "/assets/peakcare/sermorelin-brand.png",
-    alt: "Sermorelin",
-    href: "/sermorelin",
-    cta: "Featured: RSRV Sermorelin",
+    img: "/assets/peakcare/tirzepatide.png",
+    alt: "Tirzepatide (GLP-1) Therapy",
+    href: "/tirzepatide",
+    cta: "Featured: Tirzepatide Therapy",
   },
 ];
 
 export function FeaturedCarousel() {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(2);
   const last = slides.length - 1;
 
   return (
@@ -66,7 +66,10 @@ export function FeaturedCarousel() {
             <span className="kicker-white">{slide.kicker}</span>
             <h3>{slide.title}</h3>
             <Link className="explore" href={slide.href}>
-              {slide.cta}
+              <span>{slide.cta}</span>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
             </Link>
           </div>
         ) : (

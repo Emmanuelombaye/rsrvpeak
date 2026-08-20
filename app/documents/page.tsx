@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { documents } from "@/lib/data";
+import { companyPhone, documents } from "@/lib/data";
 
 export const metadata: Metadata = { title: { absolute: "RSRV Documents" } };
 
@@ -28,7 +28,8 @@ export default function DocumentsPage() {
         ))}
       </div>
       <p>
-        Questions: <a href="mailto:legal@rsrv.health">legal@rsrv.health</a> · Privacy:{" "}
+        Phone: <a href={companyPhone.href}>{companyPhone.display}</a> · Questions:{" "}
+        <a href="mailto:legal@rsrv.health">legal@rsrv.health</a> · Privacy:{" "}
         <a href="mailto:privacy@rsrv.health">privacy@rsrv.health</a> · Support:{" "}
         <a href="mailto:support@rsrv.health">support@rsrv.health</a>
       </p>

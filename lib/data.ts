@@ -6,6 +6,7 @@ export type Product = {
   price: string;
   totalPrice: string;
   tag: string;
+  pills: string[];
   category: string;
   copy: string;
   overview: string;
@@ -22,6 +23,7 @@ export const products: Product[] = [
     price: "$499.00/mo",
     totalPrice: "$499.00 USD",
     tag: "Weight Loss · Best Seller · Personalized",
+    pills: ["Weight Loss", "Best Seller"],
     category: "General",
     copy: "Compounded Tirzepatide with Vitamin B12. Designed for monthly weight management.",
     overview: "Compounded Tirzepatide with Vitamin B12. Designed for monthly weight management.",
@@ -37,6 +39,7 @@ export const products: Product[] = [
     price: "$399.00/mo",
     totalPrice: "$399.00 USD",
     tag: "Weight Loss · Best Seller · Personalized",
+    pills: ["Weight Loss", "Best Seller"],
     category: "General",
     copy: "Physician-prescribed GLP-1 weight management program. Includes clinical review, medication, and cold-chain shipping.",
     overview:
@@ -53,6 +56,7 @@ export const products: Product[] = [
     price: "$199.00/mo",
     totalPrice: "$199.00 USD",
     tag: "Longevity · Best Seller · Personalized",
+    pills: ["Longevity", "Best Seller"],
     category: "Longevity",
     copy: "Rejuvenate your cellular health, boost mental clarity, and increase energy levels.",
     overview: "A physician-prescribed NAD+ protocol designed to support cellular energy, mental clarity, and recovery.",
@@ -67,6 +71,7 @@ export const products: Product[] = [
     price: "$199.00/mo",
     totalPrice: "$199.00 USD",
     tag: "Muscle Recovery · Personalized",
+    pills: ["Muscle Recovery"],
     category: "Muscle Recovery",
     copy: "Support natural HGH production to improve muscle recovery, sleep quality, and lean body composition.",
     overview:
@@ -133,6 +138,11 @@ export const documents = [
     copy: "How protected health information may be used and disclosed, and your health-privacy rights.",
   },
 ] as const;
+
+export const companyPhone = {
+  href: "tel:+19787407778",
+  display: "+1 (978) 740-7778",
+} as const;
 
 export type LegalSlug = "terms" | "privacy" | "disclaimer" | "consent" | "hipaa";
 

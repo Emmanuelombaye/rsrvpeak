@@ -59,7 +59,7 @@ export default function DisclaimerPage() {
       <p>
         Clinical questions after you are a patient: message your assigned clinician through the Platform.
         <br />
-        General: support@rsrv.health
+        General: support@rsrv.health · +1 (978) 740-7778
       </p>
     </LegalLayout>
   );
