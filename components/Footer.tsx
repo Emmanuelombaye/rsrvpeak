@@ -26,9 +26,8 @@ export function Footer() {
             <div className="footer-links">
               <div>
                 <h5>TREATMENTS</h5>
-                <Link href="/shop">Weight Loss</Link>
-                <Link href="/shop">Longevity</Link>
-                <Link href="/shop">Muscle Recovery</Link>
+                <Link href="/tirzepatide">Tirzepatide</Link>
+                <Link href="/semaglutide">Semaglutide</Link>
               </div>
               <div>
                 <h5>COMPANY</h5>

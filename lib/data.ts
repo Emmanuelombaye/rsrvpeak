@@ -24,7 +24,7 @@ export const products: Product[] = [
     totalPrice: "$499.00 USD",
     tag: "Weight Loss · Best Seller · Personalized",
     pills: ["Weight Loss", "Best Seller"],
-    category: "General",
+    category: "Weight Loss",
     copy: "Compounded Tirzepatide with Vitamin B12. Designed for monthly weight management.",
     overview: "Compounded Tirzepatide with Vitamin B12. Designed for monthly weight management.",
     available: "Available in Personalized Tirzepatide.",
@@ -40,7 +40,7 @@ export const products: Product[] = [
     totalPrice: "$399.00 USD",
     tag: "Weight Loss · Best Seller · Personalized",
     pills: ["Weight Loss", "Best Seller"],
-    category: "General",
+    category: "Weight Loss",
     copy: "Physician-prescribed GLP-1 weight management program. Includes clinical review, medication, and cold-chain shipping.",
     overview:
       "Physician-prescribed GLP-1 weight management program. Includes clinical review, medication, and cold-chain shipping.",
@@ -81,7 +81,7 @@ export const products: Product[] = [
   },
 ];
 
-export const shopProtocols = products.slice(0, 3);
+export const shopProtocols = products.filter((product) => product.pills.includes("Weight Loss"));
 
 export const faqs = [
   {

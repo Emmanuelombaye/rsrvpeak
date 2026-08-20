@@ -13,7 +13,9 @@ function shopPrice(price: string) {
 
 export function ProductDetail({ product }: { product: Product }) {
   const [open, setOpen] = useState("overview");
-  const related = products.filter((item) => item.slug !== product.slug).slice(0, 2);
+  const related = products
+    .filter((item) => item.pills.includes("Weight Loss") && item.slug !== product.slug)
+    .slice(0, 2);
   const price = shopPrice(product.price);
   const sections = [
     { id: "overview", title: "Product Overview", copy: product.overview },

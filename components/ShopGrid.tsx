@@ -5,7 +5,8 @@ import { useMemo, useState } from "react";
 import { products } from "@/lib/data";
 import { withBase } from "@/lib/paths";
 
-const filters = ["All", "Weight Loss", "Longevity", "Muscle Recovery"] as const;
+const filters = ["All", "Weight Loss"] as const;
+const shopProducts = products.filter((product) => product.pills.includes("Weight Loss"));
 
 function shopPrice(price: string) {
   return price.replace(".00", "").replace("/mo", "");
@@ -14,7 +15,8 @@ function shopPrice(price: string) {
 export function ShopGrid() {
   const [filter, setFilter] = useState<(typeof filters)[number]>("All");
   const list = useMemo(
-    () => (filter === "All" ? products : products.filter((product) => product.pills.includes(filter) || product.category === filter)),
+    () =>
+      filter === "All" ? shopProducts : shopProducts.filter((product) => product.pills.includes(filter) || product.category === filter),
     [filter],
   );
 
