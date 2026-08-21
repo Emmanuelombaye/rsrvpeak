@@ -31,6 +31,8 @@ const nextConfig: NextConfig = {
 };
 
 if (isGithubPages) {
+  // Route Handlers under app/api require a Node host. The Pages workflow
+  // omits that folder before this static export so existing pages still build.
   nextConfig.output = "export";
   nextConfig.trailingSlash = true;
 } else {

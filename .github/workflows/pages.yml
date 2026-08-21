@@ -27,6 +27,10 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
+      # Static export cannot include Route Handlers. Keep app/api on Node/Vercel
+      # hosts; omit it here so GitHub Pages still builds from the same tree.
+      - name: Omit API routes from static export
+        run: rm -rf app/api
       - run: npm run build
         env:
           GITHUB_PAGES: "true"
